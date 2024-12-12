@@ -1,0 +1,15 @@
+﻿@model individ1.Models.Product
+
+<h2>Product Details</h2>
+
+<div>
+    <h4>Name: @Model.Name</h4>
+    <p><strong>Price:</strong> @Model.Price</p>
+    <p><strong>Description:</strong> @Model.Description</p>
+</div>
+
+<div>
+    <a href="@Url.Action("Edit", "Product", new { id = Model.Id })">Edit</a> |
+    <a href="@Url.Action("Delete", "Product", new { id = Model.Id })">Delete</a> |
+    <a href="@Url.Action("Index", "Product")">Back to List</a>
+</div>
